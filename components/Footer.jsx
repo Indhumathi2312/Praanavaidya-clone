@@ -185,12 +185,12 @@ export default function Footer() {
           <p>Copyright © 2025 Praanavaidya</p>
           <p>
             <a
-              href="https://advaitlabs.com/"
+              href="https://indhumathi-a.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#0595C4] transition-colors"
             >
-              Designed by Advaitlabs
+              Designed by Indhumathi
             </a>
           </p>
         </div>
