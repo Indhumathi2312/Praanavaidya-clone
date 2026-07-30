@@ -10,12 +10,14 @@ import TrustBadges from '@/components/TrustBadges';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import StickyCTA from '@/components/StickyCTA';
 import Footer from '@/components/Footer';
+import PromoPopup from '@/components/PromoPopup';
 
 import { heroData, statsData, therapiesData, doctorsData, expertiseData, testimonialsData, faqData } from '@/data/siteData';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FFF7F1]">
+      <PromoPopup />
       <Navbar />
       <Hero data={heroData} />
       <Stats data={statsData} />
