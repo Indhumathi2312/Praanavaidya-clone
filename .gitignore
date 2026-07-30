@@ -12,6 +12,7 @@
 
 # production
 /build
+_redirects
 
 # debug
 npm-debug.log*
