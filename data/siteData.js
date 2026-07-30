@@ -11,6 +11,231 @@ export const heroData = {
   videoSrc: "/media/hero-bg-video.mp4"
 };
 
+export const mumbaiHeroData = {
+  title: {
+    part1: "Best ",
+    highlight1: "Ayurveda ",
+    part2: "Clinic for ",
+    highlight2: "Piles & Fistula ",
+    inCity: "in Mumbai"
+  },
+  description: "Our natural therapies help reduce pain, swelling, and discomfort while promoting long-term healing and overall digestive health.",
+  ctaText: "Book Now",
+  ctaLink: "#locations",
+  videoSrc: "/media/hero-bg-video.mp4"
+};
+
+export const mumbaiExpertiseData = {
+  title: "Natural Piles and Fistula Relief with advanced Ayurveda treatments",
+  items: [
+    {
+      id: 1,
+      title: "Kshara Sutra Therapy",
+      description: "A specialized Ayurvedic procedure that uses a medicated thread to shrink and heal piles or fistula naturally without surgery or major pain.",
+      image: "/images/Kshara-Sutra-Therapy.avif"
+    },
+    {
+      id: 2,
+      title: "Herbal Remedies",
+      description: "Powerful Ayurvedic herbs like Haritaki, Triphala, and Guggulu help relieve constipation, reduce swelling, and strengthen the digestive system for long-term relief.",
+      image: "/images/Ashwagandha-Shallaki.avif"
+    },
+    {
+      id: 3,
+      title: "Basti (Enema Therapy)",
+      description: "A traditional Ayurvedic enema treatment that gently cleanses the colon, balances Vata dosha, and supports healthy bowel movements.",
+      image: "/images/Basti-Enema-Therapy.avif"
+    },
+    {
+      id: 4,
+      title: "Dietary & Lifestyle Guidance",
+      description: "Customized diet plans rich in fiber and hydration to ensure smooth digestion, soften stools, and prevent constipation.",
+      image: "/images/Personalized-Diet-Plan.avif"
+    },
+    {
+      id: 5,
+      title: "Sitz Baths",
+      description: "Simple warm water baths that soothe the anal area, reduce pain, and decrease swelling — promoting faster healing.",
+      image: "/images/Sitz-Baths.avif"
+    },
+    {
+      id: 6,
+      title: "Rasayana Therapy",
+      description: "Rejuvenation therapy that helps strengthen digestive health, improve immunity, and prevent recurrence of piles or fistula.",
+      image: "/images/Rasayana-Therapy.avif"
+    }
+  ]
+};
+
+export const mumbaiDoctorsData = {
+  title: "Our Doctors",
+  doctors: [
+    {
+      id: 1,
+      name: "Dr. Chetan Upadhyaya",
+      role: "Medical Director, MS (Ayu), FAGE",
+      experience: "Experience: 6 yrs",
+      image: "/images/Dr.-CHETAN-UPADHYAYA-img.png"
+    },
+    {
+      id: 2,
+      name: "Dr. Swasthika Upadhyaya",
+      role: "BAMS, MD (Ayu)",
+      experience: "Experience: 5 yrs",
+      image: "/images/DR.-SWASTHIKA-UPADHYAYA.png"
+    },
+    {
+      id: 3,
+      name: "Dr. Pramod Karanth",
+      role: "Center Head, BAMS, MD (Ayu)",
+      experience: "Experience: 4 yrs",
+      image: "/images/DR.-PRAMOD-KARANTH.png"
+    },
+    {
+      id: 4,
+      name: "Dr. Vyshnavi N Kini",
+      role: "BAMS MD (Ayu)",
+      experience: "Experience: 4 yrs",
+      image: "/images/doctor-vyshnavi.avif"
+    },
+    {
+      id: 5,
+      name: "Dr. Pallavi G Poojari",
+      role: "BAMS MD (Ayu)",
+      experience: "Experience: 5 yrs",
+      image: "/images/doctor-pallavi.avif"
+    },
+    {
+      id: 6,
+      name: "Dr. Kruttika Hegde",
+      role: "BAMS",
+      experience: "Experience: 5 yrs",
+      image: "/images/doctor-kruthika.avif"
+    },
+    {
+      id: 7,
+      name: "Dr. Chinmayi B U",
+      role: "BAMS",
+      experience: "Experience: 1 yr",
+      image: "/images/doctor-chinmayi.avif"
+    },
+    {
+      id: 8,
+      name: "Dr. Pragathi Santhanam",
+      role: "BAMS",
+      experience: "Experience: 1 yr",
+      image: "/images/doctor-pragathi.avif"
+    },
+    {
+      id: 9,
+      name: "Dr. Adarsh R. Pal",
+      role: "BAMS",
+      experience: "Experience: 5 yrs",
+      image: "/images/1.avif"
+    },
+    {
+      id: 10,
+      name: "Dr. Sharanbasappa",
+      role: "BAMS",
+      experience: "Experience: 1 yr",
+      image: "/images/Dr.-Sharanbasappa.avif"
+    }
+  ]
+};
+
+export const whyChooseData = {
+  badgeText1: "Discover Why",
+  badgeText2: "We’re Best For You",
+  title: "Excellence in Natural Healing for Piles & Fistula",
+  quote: "We specialize in effective Ayurvedic treatments for piles and fistula that are safe, natural, and minimally invasive. Our therapies reduce pain, swelling, and discomfort while strengthening digestive health and preventing recurrence. With personalized care and expert guidance, we help patients achieve fast recovery and lasting relief through trusted Ayurvedic methods.",
+  image: "/images/Fissure.avif",
+  ctaText: "Book Appointment",
+  ctaLink: "#locations"
+};
+
+export const mumbaiWhyChooseData = {
+  badgeText1: "Discover Why",
+  badgeText2: "We’re Best For You",
+  title: "Excellence in Natural Healing for Piles & Fistula",
+  quote: "We specialize in effective Ayurvedic treatments for piles and fistula that are safe, natural, and minimally invasive. Our therapies reduce pain, swelling, and discomfort while strengthening digestive health and preventing recurrence. With personalized care and expert guidance, we help patients achieve fast recovery and lasting relief through trusted Ayurvedic methods.",
+  image: "/images/Fissure.avif",
+  ctaText: "Book Appointment",
+  ctaLink: "#locations"
+};
+
+export const customerData = {
+  title: "See why customers love",
+  reviews: [
+    {
+      id: 1,
+      author: "Kiran.M",
+      text: "I visited PranaVaidya Ayurvedic Hospital, Rajajinagar, and consulted Dr. Pramod Karanth. The staff were friendly, the clinic peaceful and clean. Affordable, effective treatment helped me feel better quickly. Highly recommended for genuine Ayurvedic care."
+    },
+    {
+      id: 2,
+      author: "Prathi Yadav",
+      text: "I went to praanavaidya a few months back and got consulted with Dr. Pramod, my condition got better after visiting praanavaidya."
+    },
+    {
+      id: 3,
+      author: "Vamsi",
+      text: "I visited this hospital for Panchakarma treatment. The ambiance was calming, and the Amritha app tracked progress. Dr. Pramod sir provided personalized care, and the attentive staff ensured effective treatment. Highly recommended for all Ayurvedic therapies."
+    }
+  ]
+};
+
+export const mumbaiTestimonialsData = {
+  title: "See why customers love",
+  reviews: [
+    {
+      id: 1,
+      author: "Kiran.M",
+      text: "I visited PranaVaidya Ayurvedic Hospital, Rajajinagar, and consulted Dr. Pramod Karanth. The staff were friendly, the clinic peaceful and clean. Affordable, effective treatment helped me feel better quickly. Highly recommended for genuine Ayurvedic care."
+    },
+    {
+      id: 2,
+      author: "Prathi Yadav",
+      text: "I went to praanavaidya a few months back and got consulted with Dr. Pramod, my condition got better after visiting praanavaidya."
+    },
+    {
+      id: 3,
+      author: "Vamsi",
+      text: "I visited this hospital for Panchakarma treatment. The ambiance was calming, and the Amritha app tracked progress. Dr. Pramod sir provided personalized care, and the attentive staff ensured effective treatment. Highly recommended for all Ayurvedic therapies."
+    }
+  ]
+};
+
+export const mumbaiFaqData = {
+  title: "Frequently Asked Questions",
+  faqs: [
+    {
+      id: 1,
+      question: "Do I need surgery for piles or fistula?",
+      answer: "Not always. Many cases can be treated safely with Ayurvedic therapies, herbal remedies, and lifestyle changes. Surgery is only for severe or complicated cases."
+    },
+    {
+      id: 2,
+      question: "How long will it take to feel better?",
+      answer: "Many patients notice improvement within a few days, though full recovery may take a few weeks depending on the condition."
+    },
+    {
+      id: 3,
+      question: "How can I prevent piles or fistula from coming back?",
+      answer: "Eat a high-fiber diet, drink plenty of water, avoid straining during bowel movements, stay active, and follow healthy toilet habits."
+    },
+    {
+      id: 4,
+      question: "Are piles and fistula serious conditions?",
+      answer: "They are usually not life-threatening, but can cause significant pain and discomfort. Early treatment prevents complications like chronic infection, worsening piles, or recurrent fistula."
+    },
+    {
+      id: 5,
+      question: "What Ayurvedic treatments are available?",
+      answer: "• Kshara Sutra Therapy: A minimally invasive method for piles and fistula\n• Herbal Remedies: Relieve constipation and reduce inflammation\n• Basti (Enema Therapy): Cleanses colon and regulates bowel movements\n• Dietary & Lifestyle Guidance: Prevent recurrence\n• Sitz Baths: Relieve pain and swelling\n• Rasayana Therapy: Rejuvenates digestive health."
+    }
+  ]
+};
+
 export const statsData = {
   title: "Trusted Care - Proven Results",
   description: "Delivering successful treatments with expert doctors, advanced Ayurveda therapies, and thousands of satisfied patients.",

@@ -5,7 +5,7 @@ import { faqData as defaultFaqData } from '@/data/siteData';
 
 export default function FAQ({ data = defaultFaqData }) {
   const { title, faqs } = data;
-  const [openId, setOpenId] = useState(1); // First item open by default like in screenshot
+  const [openId, setOpenId] = useState(1); // First item open by default
 
   const toggleFaq = (id) => {
     setOpenId((prevId) => (prevId === id ? null : id));
@@ -17,9 +17,7 @@ export default function FAQ({ data = defaultFaqData }) {
 
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#192c27] text-left tracking-tight mb-10 leading-tight">
-          {title.split(" ").map((word, i) => (
-            <span key={i} className="block sm:inline">{word}{" "}</span>
-          ))}
+          {title}
         </h2>
 
         {/* Stacked Accordion Cards */}
@@ -52,7 +50,7 @@ export default function FAQ({ data = defaultFaqData }) {
                 {/* Accordion Answer Content */}
                 {isOpen && (
                   <div className="pt-5 border-t border-black/5 mt-4 animate-fadeIn">
-                    <p className="text-[15px] sm:text-[16px] text-[#555555] leading-relaxed">
+                    <p className="text-[15px] sm:text-[16px] text-[#555555] leading-relaxed whitespace-pre-line">
                       {item.answer}
                     </p>
                   </div>

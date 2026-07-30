@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-[#FFF7F1] text-[#2b2b2b] pt-[100px] pb-[50px] font-sans border-t border-black/10">
+    <footer id="locations" className="bg-[#FFF7F1] text-[#2b2b2b] pt-[100px] pb-[50px] font-sans border-t border-black/10">
       <div className="max-w-[1340px] mx-auto px-5 sm:px-8">
 
         {/* Top Section: Centered Buttons & Bullet Features */}

@@ -24,7 +24,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links - Pure anchor hashes for smooth, refresh-free scroll */}
         <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-[#192c27] text-[15px] font-medium tracking-tight">
           <a href="#Home" className="hover:text-[#007f5f] transition-colors">Home</a>
           <a href="#Testimonials" className="hover:text-[#007f5f] transition-colors">Testimonials</a>
