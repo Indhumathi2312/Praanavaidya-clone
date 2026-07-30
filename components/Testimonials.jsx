@@ -1,67 +1,115 @@
 "use client";
 
-import { Star, Quote, Play } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { testimonialsData as defaultTestimonialsData } from '@/data/siteData';
 
-export default function Testimonials() {
-  const videoTestimonials = [
-    { id: 1, src: "/media/pv-testimonial-1.mp4", title: "Piles & Fissure Recovery Experience", patient: "Patient from Bangalore" },
-    { id: 2, src: "/media/pv-testimonial-2.mp4", title: "Panchakarma Rejuvenation Journey", patient: "Panchakarma Patient" },
-    { id: 3, src: "/media/pv-testimonial-3.mp4", title: "Joint & Spine Pain Relief", patient: "Spine Treatment Patient" },
-    { id: 4, src: "/media/pv-testimonial-4.mp4", title: "Diabetes Management Success", patient: "Ayurveda Wellness Patient" },
-    { id: 5, src: "/media/pv-testmonial-5.mp4", title: "Kidney Stones Expulsion Story", patient: "Kidney Care Patient" },
-    { id: 6, src: "/media/pv-testimonial-6.mp4", title: "Skin Condition Detox Recovery", patient: "Psoriasis Treatment Patient" }
+export default function Testimonials({ data = defaultTestimonialsData }) {
+  const { title, videos } = data;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Auto-scroll every 3 seconds (3000ms), matching praanavaidya.html script
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [videos.length, isPaused]);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + videos.length) % videos.length);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length);
+  };
+
+  // Compute 3 visible videos starting from currentIndex
+  const visibleVideos = [
+    videos[currentIndex % videos.length],
+    videos[(currentIndex + 1) % videos.length],
+    videos[(currentIndex + 2) % videos.length]
   ];
 
   return (
-    <section id="testimonials" className="py-16 bg-[#FFF7F1]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section 
+      id="Testimonials" 
+      className="bg-[#FFF7F1] text-[#192c27] py-14 sm:py-18 font-sans border-t border-black/5"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         
-        <div className="flex items-center justify-center gap-1 text-amber-500 mb-2">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-          ))}
-        </div>
-        <span className="text-[#007f5f] font-bold text-xs sm:text-sm tracking-widest uppercase bg-white px-3 py-1 rounded-full border border-amber-200">
-          4.9★ Patient Ratings
-        </span>
-
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#192c27] mt-3 mb-4">
-          Real Patient Stories & Video Testimonials
+        {/* Centered Section Title */}
+        <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#192c27] text-center tracking-tight mb-10 sm:mb-12">
+          {title}
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base mb-12">
-          Watch video reviews from patients who experienced successful recovery through Praanavaidya&apos;s natural Ayurvedic treatments.
-        </p>
 
-        {/* Video Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-          {videoTestimonials.map((item) => (
-            <div 
-              key={item.id}
-              className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col group"
-            >
-              <div className="relative w-full aspect-video bg-black flex items-center justify-center">
+        {/* Carousel Wrapper with Left & Right Overlay Buttons */}
+        <div className="relative px-2 sm:px-8 lg:px-12">
+          
+          {/* Left Arrow Button (Dark Charcoal Circle) */}
+          <button 
+            onClick={handlePrev}
+            className="absolute -left-2 sm:-left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#555555] hover:bg-[#333333] text-white shadow-md flex items-center justify-center active:scale-95 transition-all duration-200"
+            aria-label="Previous video testimonial"
+          >
+            <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Right Arrow Button (Dark Charcoal Circle) */}
+          <button 
+            onClick={handleNext}
+            className="absolute -right-2 sm:-right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#555555] hover:bg-[#333333] text-white shadow-md flex items-center justify-center active:scale-95 transition-all duration-200"
+            aria-label="Next video testimonial"
+          >
+            <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Video Cards Grid: 1 on mobile, 2 on tablet (md), 3 on desktop (lg) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 transition-all duration-500 ease-in-out">
+            {visibleVideos.map((item, idx) => (
+              <div 
+                key={`${item.id}-${idx}`}
+                className={`relative rounded-[16px] overflow-hidden bg-black shadow-lg border border-black/10 aspect-[3/4] h-[380px] sm:h-[420px] lg:h-[460px] ${
+                  idx === 1 ? 'hidden md:block' : ''
+                } ${
+                  idx === 2 ? 'hidden lg:block' : ''
+                }`}
+              >
                 <video 
                   src={item.src} 
                   controls 
                   preload="metadata"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-[16px]"
                 />
               </div>
+            ))}
+          </div>
 
-              <div className="p-4 flex flex-col justify-between flex-grow">
-                <div>
-                  <h3 className="text-base font-bold text-[#192c27] group-hover:text-[#007f5f] transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 mt-1 flex items-center gap-1">
-                    <Quote className="w-3 h-3 text-[#007f5f]" />
-                    {item.patient}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+          {/* Bottom Pagination Dots */}
+          <div className="flex justify-center items-center gap-2 mt-8">
+            {videos.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  currentIndex === idx 
+                    ? 'w-6 bg-[#192c27]' 
+                    : 'w-2.5 bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to video slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
         </div>
 
       </div>

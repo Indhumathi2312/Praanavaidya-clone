@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/images/cropped-pv-site-icon.avif" />
       </head>
-      <body className="antialiased text-[#192c27] bg-white">
+      <body className="antialiased text-[#192c27] bg-[#FFF7F1]">
         {children}
       </body>
     </html>
