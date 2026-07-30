@@ -20,12 +20,12 @@ export default function WhyChooseUs({ data = defaultWhyChooseData }) {
           
           {/* Left Column: Green Highlight Badge Headline matching HTML */}
           <div className="lg:col-span-4 flex items-center justify-center lg:justify-start">
-            <div className="text-[26px] sm:text-[30px] lg:text-[34px] font-bold text-white leading-tight tracking-tight text-center lg:text-left">
-              <span className="inline-block bg-[#007f5f] text-white px-3.5 py-1 rounded-[4px] shadow-sm">
+            <div className="text-[26px] sm:text-[30px] lg:text-[34px] font-bold  leading-tight tracking-tight text-center lg:text-left">
+              <span className="inline-block  text-black px-3.5 py-1 rounded-[4px] ">
                 {badgeText1}
               </span>
               <br />
-              <span className="inline-block bg-[#007f5f] text-white px-3.5 py-1 rounded-[4px] shadow-sm mt-2">
+              <span className="inline-block  text-black px-3.5 py-1 rounded-[4px]  mt-2">
                 {badgeText2}
               </span>
             </div>

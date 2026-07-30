@@ -20,6 +20,8 @@ export default function Hero({ data = defaultHeroData }) {
               <span className="text-[#0595C4]">{title.highlight1}</span>
               {title.part2}
               <span className="text-[#7ed957]">{title.highlight2}</span>
+              <span className='block'>{title.inCity}</span>
+              
             </h1>
 
             <p className="text-[15px] sm:text-[16px] text-[#555555] leading-[26px] max-w-[500px] mb-8">

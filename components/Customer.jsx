@@ -14,9 +14,9 @@ export default function Customer({ data = defaultData }) {
           {title}
         </h2>
 
-        {/* 3 Review Cards Grid matching 1340px container & html card sizes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {displayReviews.slice(0, 3).map((item, idx) => (
+        {/* Review Cards Grid showing all customer reviews */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          {displayReviews.map((item, idx) => (
             <div 
               key={item.id || idx}
               className="bg-white rounded-[20px] p-7 sm:p-8 shadow-[0_8px_24px_rgba(0,0,0,0.06)] border border-black/5 flex flex-col justify-between h-full min-h-[340px] transition-all duration-300 hover:shadow-lg"

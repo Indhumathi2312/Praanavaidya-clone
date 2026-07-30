@@ -1,4 +1,5 @@
 import './globals.css';
+import AppointmentModal from '@/components/AppointmentModal';
 
 export const metadata = {
   title: 'Ayurvedic Treatment Hospital in Bangalore – Praanavaidya',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="antialiased text-[#192c27] bg-[#FFF7F1]">
         {children}
+        <AppointmentModal />
       </body>
     </html>
   );
