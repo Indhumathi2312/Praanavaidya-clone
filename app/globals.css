@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+:root {
+  --wp--preset--color--palette-color-1: #007f5f;
+  --wp--preset--color--palette-color-2: #55a630;
+  --wp--preset--color--palette-color-3: #365951;
+  --wp--preset--color--palette-color-4: #192c27;
+  --wp--preset--color--palette-color-5: #E6F0EE;
+  --wp--preset--color--palette-color-6: #F2F7F6;
+  --wp--preset--color--palette-color-7: #FFF7F1;
+  --wp--preset--color--palette-color-8: #ffffff;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: #192c27;
+  background-color: #ffffff;
+}
+
+/* ================= HEADER WRAPPER ================= */
+.pv-header {
+  background-color: transparent;
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  padding: 0 10px;
+}
+
+.pv-header-container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 426px) {
+  .pv-header-container {
+    width: 95%;
+    padding: 12px 14px;
+  }
+}
+
+/* ================= LOGO ================= */
+.pv-header-logo img {
+  height: 46px;
+  display: block;
+  width: auto;
+}
+
+/* ================= DESKTOP NAV ================= */
+.pv-header-nav {
+  display: none;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .pv-header-nav {
+    display: flex;
+  }
+}
+
+.pv-header-nav a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #192c27;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pv-header-nav a:hover {
+  color: #007f5f;
+}
+
+/* ================= RIGHT SECTION ================= */
+.pv-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pv-header-icons {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 1280px) {
+  .pv-header-icons {
+    display: flex;
+  }
+}
+
+.pv-header-icons img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+.pv-header-call {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #E6F0EE;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #007f5f;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.pv-header-call:hover {
+  background-color: #d1e4e0;
+}
+
+.pv-header-cta {
+  background-color: #007f5f;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .pv-header-cta {
+    display: inline-block;
+  }
+}
+
+.pv-header-cta:hover {
+  background-color: #00664c;
+}
+
+/* ================= HAMBURGER (MOBILE) ================= */
+.pv-header-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .pv-header-hamburger {
+    display: none;
+  }
+}
+
+.pv-header-hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: #192c27;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ================= MOBILE NAV ================= */
+.pv-header-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.pv-header-mobile-nav.is-open {
+  max-height: 400px;
+  opacity: 1;
+  padding: 20px;
+}
+
+.pv-header-mobile-nav a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #192c27;
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pv-header-mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
